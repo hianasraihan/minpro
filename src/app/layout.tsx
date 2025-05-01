@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CINEMAX",
-  description: "Developed By : Cinemax",
+  title: "Event-In",
+  description: "Developed By : Event-In",
 };
 
 export default function RootLayout({

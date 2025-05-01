@@ -5,106 +5,104 @@ const About = () => {
   return (
     <div className="pt-20 font-sans text-center">
       <div className="mb-8 text-5xl font-bold">
-        <h1>About Cinemax</h1>
+        <h1>About Event-In</h1>
+        <div className="h-2 w-32 bg-yellow-500 mx-auto" />
       </div>
 
       <div className="mx-auto w-full px-8 text-lg text-gray-700 text-justify">
         <p className="mb-6">
-          Cinemax is a premier online platform designed to simplify movie
-          theater bookings for movie enthusiasts. Whether you're a casual
-          movie-goer or a film aficionado, Cinemax offers an intuitive,
-          user-friendly experience to help you book tickets with just a few
-          clicks.
+          Event-In is your trusted platform for discovering and booking tickets
+          to the most exciting events, concerts, and travel experiences. Whether
+          you're a music lover, culture seeker, or adventure enthusiast,
+          Event-In makes it easy to plan your next outing—anytime, anywhere.
         </p>
 
         <h2 className="mb-4 text-3xl font-semibold">Key Features:</h2>
         <ul className="mb-8 list-disc list-inside text-gray-600">
           <li>
-            <strong>Real-Time Availability:</strong> Cinemax offers real-time
-            booking for movies across various theaters. You can quickly find out
-            what's showing at your local cinema, view available seats, and book
-            your tickets instantly.
+            <strong>Real-Time Event Listings:</strong> Instantly view upcoming
+            events, concerts, exhibitions, and tour packages with real-time
+            availability.
           </li>
           <li>
-            <strong>User-Friendly Interface:</strong> Our website and mobile app
-            feature a modern, minimalist design. The simple, intuitive interface
-            ensures that even first-time users can navigate effortlessly.
+            <strong>User-Friendly Interface:</strong> Enjoy a smooth, intuitive
+            design that makes browsing and booking fast and hassle-free.
           </li>
           <li>
-            <strong>Wide Selection of Movies:</strong> From the latest
-            blockbusters to indie gems, Cinemax offers a broad selection of
-            movies. Filter by genre, release date, or rating to find your match.
+            <strong>Diverse Experiences:</strong> From live music and cultural
+            festivals to guided trips and workshops, find experiences that suit
+            your style.
           </li>
           <li>
-            <strong>Secure Payment Gateway:</strong> We support multiple payment
-            methods including cards and digital wallets—quick and secure.
+            <strong>Secure Payments:</strong> Pay safely using a variety of
+            methods, including cards and digital wallets.
           </li>
           <li>
-            <strong>Personalized Recommendations:</strong> Smart suggestions
-            based on your preferences and booking history.
+            <strong>Personalized Recommendations:</strong> Get smart suggestions
+            based on your interests and past bookings.
           </li>
           <li>
-            <strong>Exclusive Deals & Discounts:</strong> Get early access to
-            premieres and enjoy seasonal promotions.
+            <strong>Exclusive Deals & Access:</strong> Be the first to access
+            presales, VIP packages, and seasonal offers.
           </li>
           <li>
-            <strong>Seat Selection & Show Times:</strong> Pick your seat in real
-            time and find showtimes that fit your schedule.
+            <strong>Flexible Seating & Scheduling:</strong> Choose seats and
+            times that work best for you—where applicable.
           </li>
           <li>
-            <strong>Customer Support:</strong> Our team is available 24/7 to
-            help you with any booking-related issues.
+            <strong>24/7 Customer Support:</strong> Our team is always here to
+            help with any questions or booking concerns.
           </li>
         </ul>
 
-        <h2 className="mb-4 text-3xl font-semibold">Why Choose Cinemax?</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Why Choose Event-In?</h2>
         <ul className="mb-8 list-disc list-inside text-gray-600">
           <li>
-            <strong>Convenience:</strong> Book tickets anytime, anywhere from
-            any device.
+            <strong>Convenience:</strong> Book tickets anytime, anywhere with
+            ease.
           </li>
           <li>
-            <strong>Variety:</strong> Access all your favorite cinemas and the
-            latest releases.
+            <strong>Variety:</strong> Access a wide range of events and
+            destinations tailored to your lifestyle.
           </li>
           <li>
-            <strong>Reliability:</strong> Real-time booking updates and secure
-            payments you can trust.
+            <strong>Reliability:</strong> Transparent availability and trusted
+            payment processing.
           </li>
         </ul>
 
         <h2 className="mb-4 text-3xl font-semibold">How It Works:</h2>
         <ol className="mb-8 list-decimal list-inside text-gray-600">
           <li>
-            <strong>Browse Movies:</strong> Check out the latest films via our
-            website or app.
+            <strong>Explore Events:</strong> Browse through our latest events,
+            concerts, or travel packages via the website or app.
           </li>
           <li>
-            <strong>Select Theater & Show Time:</strong> Pick your preferred
-            cinema and time.
+            <strong>Choose Location & Time:</strong> Pick your desired
+            destination, venue, or event schedule.
           </li>
           <li>
-            <strong>Pick Your Seats:</strong> Choose from available seats—
-            premium, regular, or VIP.
+            <strong>Select Your Ticket:</strong> Choose ticket types that match
+            your preferences— general, VIP, or group.
           </li>
           <li>
-            <strong>Pay & Confirm:</strong> Complete your payment and get
-            instant confirmation.
+            <strong>Make Payment:</strong> Secure your spot with fast and secure
+            checkout.
           </li>
           <li>
-            <strong>Enjoy the Movie!</strong> Show your ticket and sit back for
-            the experience.
+            <strong>Enjoy the Experience!</strong> Present your digital ticket
+            and make lasting memories.
           </li>
         </ol>
 
         <p className="text-lg font-semibold text-gray-700">
-          Ready to make your movie night easier? Visit{" "}
+          Ready to explore unforgettable events and adventures? Visit{" "}
           <Link
-            href="https://www.cinemax.com"
+            href="https://www.event-in.com"
             className="text-blue-500 underline">
-            www.CineMax.com
+            www.Event-In.com
           </Link>{" "}
-          to book your next movie ticket in minutes!
+          and plan your next experience in just a few clicks!
         </p>
       </div>
     </div>

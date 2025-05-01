@@ -1,25 +1,25 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa"; // Import icon-iconnya
+import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10 mt-1">
+    <footer className="bg-blue-950 text-white py-10 border-t-4 border-yellow-500">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Column 1: Brand Info */}
           <div>
             <Link href="/" className="flex text-9xl items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="/event-in.png"
                 alt="CineMax Logo"
                 width={120}
                 height={120}
               />
               <span className="text-2xl font-bold"></span>
             </Link>
-            <p className="mt-3 text-gray-400">Watch Anything You Want</p>
+            <p className="mt-3 text-gray-400">Enjoy Your Holiday With Us</p>
           </div>
 
           {/* Column 2: Links */}
@@ -28,11 +28,6 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-gray-400">
-                  Movies
-                </Link>
-              </li>
-              <li>
-                <Link href="/event" className="hover:text-gray-400">
                   Event
                 </Link>
               </li>
@@ -42,8 +37,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-gray-400">
-                  Contact
+                <Link href="/PrivacyPolicy" className="hover:text-gray-400">
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -77,7 +72,9 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="mt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} CINEMAX. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} EVENT-IN. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
