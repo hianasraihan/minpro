@@ -1,15 +1,16 @@
 "use client";
-
-
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/app/component/ui/button";
 import { Calendar, MapPin } from "lucide-react";
 import { events } from "@/app/page";
+import { FaCartShopping } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 export default function SlugEventPage() {
   const params = useParams();
+  const router = useRouter();
   const [event, setEvent] = useState<any>({});
   const [quantity, setQuantity] = useState(0);
   const [isBooking, setIsBooking] = useState(false);
@@ -37,25 +38,56 @@ export default function SlugEventPage() {
     }, 1000);
   };
 
+  const handleAddToWishlist = () => {
+    const existingWishlist = JSON.parse(
+      localStorage.getItem("wishlist") || "[]"
+    );
+
+    const isAlreadyInWishlist = existingWishlist.some(
+      (item: any) => item.id === event.id
+    );
+
+    if (!isAlreadyInWishlist) {
+      const newItem = {
+        id: event.id,
+        title: event.title,
+        poster: event.poster || event.image,
+        type: "Event",
+      };
+
+      const updatedWishlist = [...existingWishlist, newItem];
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+    }
+
+    router.push("/dashboard/wishlist");
+  };
+
   useEffect(() => {
     getEventDetail();
   }, []);
 
   return (
-    <div className="max-w-4xl  mx-auto py-10 px-4">
+    <div className="max-w-4xl pt-34 mx-auto py-10 px-4">
       <h1 className="text-4xl font-bold text-center text-gray-900 mb-6">
         {event.title}
       </h1>
 
       <Image
         src={event.poster || event.image}
-        alt={event.title || "Event poster"}
+        alt={event.title || "Event Image"}
         width={1000}
         height={600}
         className="rounded-2xl shadow-xl object-cover w-full h-[500px] mb-10"
       />
 
-      <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+      <div className="mt-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Description</h2>
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line font-semibold">
+          {event.description || "Description not available for this event."}
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center mt-10">
         <span className="text-indigo-600 border-l-8 border-indigo-600 rounded-r-md px-3 py-1 mr-2"></span>
         Pilihan Tiket
       </h2>
@@ -119,6 +151,14 @@ export default function SlugEventPage() {
             {isBooking ? "Memproses..." : "Pesan Sekarang"}
           </Button>
         </div>
+
+        {/* Ikon Keranjang */}
+        <button
+          onClick={handleAddToWishlist}
+          className="mt-4 flex justify-center ml-4 w-full pl-155">
+          <FaCartShopping className="text-4xl text-blue-700 hover:text-blue-900 transition" />
+        </button>
+
         {bookingSuccess && (
           <p className="mt-4 text-green-600 font-semibold">
             Tiket berhasil dipesan!

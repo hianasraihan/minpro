@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,32 +10,18 @@ interface WishlistItem {
   type: "Event" | "Attraction";
 }
 
-const initialWishlist: WishlistItem[] = [
-  {
-    id: "1",
-    title: "We The Fest 2025",
-    poster: "/wtf.jpg",
-    type: "Event",
-  },
-  {
-    id: "7",
-    title: "Universal Studios Singapore",
-    poster: "/unv.jpg",
-    type: "Attraction",
-  },
-  {
-    id: "12",
-    title: "Tari Kecak Bali",
-    poster: "/Tari-kecak.jpg",
-    type: "Attraction",
-  },
-];
-
 export default function DashboardWishlist() {
-  const [wishlist, setWishlist] = useState(initialWishlist);
+  const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
+
+  useEffect(() => {
+    const storedWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+    setWishlist(storedWishlist);
+  }, []);
 
   const handleRemove = (id: string) => {
-    setWishlist(wishlist.filter((item) => item.id !== id));
+    const updatedWishlist = wishlist.filter((item) => item.id !== id);
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+    setWishlist(updatedWishlist);
   };
 
   return (
@@ -62,7 +48,7 @@ export default function DashboardWishlist() {
                 <p className="text-sm text-gray-500 mb-4">{item.type}</p>
                 <div className="flex justify-between items-center">
                   <Link
-                    href={`/event/${item.id}`}
+                    href={`/${item.type.toLowerCase()}/${item.id}`}
                     className="text-blue-600 hover:underline">
                     View Details
                   </Link>

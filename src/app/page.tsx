@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import Slider from "./component/slider";
 import SearchBar from "./search/page";
 import Link from "next/link";
-
 interface EventType {
   id: number;
   title: string;
@@ -17,6 +16,7 @@ interface EventType {
   location?: string;
   time?: string;
   price: string;
+  description?: string;
 }
 
 export const events: EventType[] = [
@@ -27,6 +27,8 @@ export const events: EventType[] = [
     location: "Jakarta",
     time: "20 Juli 2024",
     price: "Rp 750.000",
+    description:
+      "We The Fest adalah sebuah festival musik tahunan yang diadakan di Jakarta, Indonesia, yang menampilkan berbagai genre musik dan artis lokal maupun internasional. Festival ini biasanya menawarkan pengalaman yang lebih dari sekadar musik, termasuk seni, mode, dan kuliner.",
   },
   {
     id: 2,
@@ -35,6 +37,8 @@ export const events: EventType[] = [
     location: "Jakarta",
     time: "4 Oktober 2024",
     price: "Rp 450.000",
+    description:
+      "Synchronize Fest adalah festival musik multi-genre tahunan berskala nasional yang menampilkan beragam musisi dan pertunjukan musik dari berbagai genre, mulai dari pop, rock, hingga musik elektronik. Festival ini juga menyediakan berbagai aktivitas lain seperti outdoor cinema, art & merch market, dan F&B Festival. Synchronize Fest berlokasi di Jakarta International Expo, Kemayoran, Jakarta. ",
   },
   {
     id: 3,
@@ -43,6 +47,8 @@ export const events: EventType[] = [
     location: "Jakarta",
     time: "2 Maret 2024",
     price: "Rp 600.000",
+    description:
+      "Java Jazz Festival (JJF), atau Jakarta International Java Jazz Festival, adalah festival musik jazz terbesar di Indonesia dan salah satu yang terbesar di dunia. Festival ini diselenggarakan setiap tahun di Jakarta oleh Java Festival Production sejak tahun 2005. JJF menghadirkan berbagai musisi jazz dari dalam dan luar negeri, serta musisi dari genre lain seperti R&B, Soul, dan Reggae. ",
   },
   {
     id: 4,
@@ -51,6 +57,8 @@ export const events: EventType[] = [
     location: "Bali",
     time: "8 Desember 2024",
     price: "Rp 900.000",
+    description:
+      "festival musik elektronik (EDM) besar yang diadakan di Garuda Wisnu Kencana (GWK) Bali. Festival ini terkenal karena menampilkan artis-artis EDM internasional dan menjadi daya tarik utama bagi penggemar musik elektronik di Indonesia dan Asia. ",
   },
   {
     id: 5,
@@ -59,6 +67,8 @@ export const events: EventType[] = [
     location: "Bali",
     time: "5 Agustus 2024",
     price: "Rp 550.000",
+    description:
+      "Bali Music Festival adalah festival musik yang diadakan di Bali, Indonesia, yang fokus pada berbagai genre musik, termasuk musik dunia, yoga, tari, dan seni, serta berbagai workshop kesehatan dan kebugaran. Festival ini menarik penggemar musik dan yoga dari seluruh dunia, dan menampilkan pertunjukan musik, tari, dan berbagai workshop. ",
   },
   {
     id: 6,
@@ -67,42 +77,53 @@ export const events: EventType[] = [
     location: "Bandung",
     time: "14 September 2024",
     price: "Rp 500.000",
+    description:
+      "festival musik lintas genre dan lintas generasi terbesar di Indonesia. Festival ini, yang pertama kali diselenggarakan pada tahun 2002, dikenal dengan keragaman musiknya, mulai dari rock, pop, indie, elektronik, hingga alternatif. Soundrenaline juga menonjol karena menghadirkan berbagai hiburan selain musik, seperti stand up comedy dan seni visual. ",
   },
   {
     id: 7,
     title: "Universal Studios Singapore",
-    location: "Resorts World Sentosa",
+    location: "Singapore",
     image: "/unv.jpg",
     price: "Rp.1.300.000",
+    description:
+      "Universal Studios Singapore is a theme park located in Resorts World Sentosa at Sentosa Island, Singapore. It features 24 rides, shows, and attractions, divided into seven themed zones. The park is Southeast Asia's first and only Universal Studios theme park, offering a variety of experiences based on popular movies and TV shows. ",
   },
   {
     id: 8,
     title: "Marina Bay Sands Skypark",
-    location: "Marina Bay Sands Singapore",
+    location: "Singapore",
     image: "/skypark.jpg",
     price: "Rp.900.000",
+    description:
+      "Marina Bay Sands is an integrated resort in Singapore featuring a hotel, a casino, a luxury shopping mall, convention facilities, and various entertainment venues. The resort includes three 55-story towers connected on the ground level, with a SkyPark observation deck and an infinity pool on top. It's known for its unique architecture, including the inclined lower sections of the towers, and is a prominent landmark in Singapore's skyline. ",
   },
   {
     id: 9,
     title: "Gardens by the Bay",
-    location: "Downtown Core, Kallang, Marina East, Marina South, Singapore",
+    location: "Singapore",
     image: "/gardens.jpg",
     price: "Rp.700.000",
+    description:
+      "Gardens by the Bay is an iconic garden located in the heart of Marina Bay, Singapore. As one of Asia top tourist attractions, it showcases a stunning blend of nature and futuristic green technology. Spanning over 100 hectares, it features major highlights like the Flower Dome, the world largest glass greenhouse with plants from Mediterranean and semi-arid regions, and the Cloud Forest, a misty dome with a 35-meter indoor waterfall and tropical mountain ecosystem.",
   },
   {
     id: 10,
     title: "Sentosa Island Adventure",
-    location: "Sentosa Island",
+    location: "Singapore",
     image: "/sentosa.jpg",
     price: "Rp.500.000",
+    description:
+      "Sentosa Island Adventure is a thrilling getaway just off Singapore southern coast. As the country top island resort, it offers exciting attractions, scenic beaches, and lush greenery. Visitors can enjoy adventures like the Skyline Luge, Mega Adventure zipline, and AJ Hackett giant swing, or explore family favorites like Universal Studios, the S.E.A. Aquarium, and relaxing beaches like Siloso and Palawan. With its mix of fun, nature, and excitement, Sentosa is a must-visit for all types of travelers.",
   },
   {
     id: 11,
     title: "Candi Prambanan",
     image: "/prambanan.jpg",
-    location:
-      "kecamatan Prambana Desa Bokoharjo, Sleman, Daerah Istimewa Yogyakarta ",
+    location: "Yogyakarta",
     price: "Rp 50.000",
+    description:
+      "Candi Prambanan membawa Anda menyusuri jejak sejarah dan keindahan budaya Jawa yang memukau. Terletak di Yogyakarta, Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 dan didedikasikan untuk Trimurti: Brahma, Wisnu, dan Siwa.",
   },
   {
     id: 12,
@@ -110,6 +131,8 @@ export const events: EventType[] = [
     image: "/Tari-kecak.jpg",
     location: "Bali",
     price: "200.000",
+    description:
+      "pertunjukan seni paling ikonik dari Bali yang memadukan drama, tari, dan nyanyian vokal khas. Berasal dari tradisi ritual kuno, tarian ini biasanya dibawakan oleh puluhan pria yang duduk melingkar sambil meneriakkan cak-cak-cak secara ritmis, menciptakan irama yang menggetarkan. ",
   },
   {
     id: 13,
@@ -117,6 +140,8 @@ export const events: EventType[] = [
     image: "/tangkuban.jpg",
     location: "Bandung",
     price: "Rp 150.000",
+    description:
+      "gunung berapi aktif yang terletak sekitar 30 km di utara Kota Bandung, Jawa Barat. Gunung ini terkenal karena bentuk kawahnya yang menyerupai perahu terbalik, sesuai dengan legenda rakyat populer tentang Sangkuriang dan Dayang Sumbi. ",
   },
   {
     id: 14,
@@ -124,6 +149,8 @@ export const events: EventType[] = [
     image: "/merapi.jpg",
     location: "Yogyakarta",
     price: "Rp 250.000",
+    description:
+      " pengalaman wisata petualangan yang membawa Anda menjelajahi lereng Gunung Merapi, salah satu gunung berapi paling aktif di Indonesia. Dengan menggunakan jeep 4x4, Anda akan diajak menyusuri jalur berbatu dan berdebu, menyaksikan langsung jejak dahsyat erupsi Merapi serta kisah ketangguhan masyarakat sekitarnya.",
   },
   {
     id: 15,
@@ -131,6 +158,8 @@ export const events: EventType[] = [
     image: "/pantai.jpg",
     location: "Yogyakarta",
     price: "Rp 30.000",
+    description:
+      "salah satu pantai paling terkenal di Yogyakarta, yang terletak sekitar 27 km di selatan Kota Yogyakarta. Pantai ini memikat wisatawan dengan hamparan pasir hitam yang luas, ombak besar khas Samudra Hindia, serta pemandangan matahari terbenam yang memukau. Selain keindahan alamnya, Parangtritis juga memiliki nuansa mistis yang kuat karena erat kaitannya dengan legenda Nyi Roro Kidul, Ratu Pantai Selatan. ",
   },
   {
     id: 16,
@@ -138,16 +167,24 @@ export const events: EventType[] = [
     image: "/tmii.jpg",
     location: "Jakarta",
     price: "Rp 300.000",
+    description:
+      "taman budaya bertema Indonesia yang terletak di Jakarta Timur. Tempat ini dirancang untuk memperkenalkan kekayaan budaya dan keragaman suku bangsa Indonesia dalam satu kawasan yang luas. TMII menampilkan paviliun dari 34 provinsi yang merepresentasikan rumah adat, pakaian tradisional, tarian, dan kebudayaan khas masing-masing daerah.",
   },
 ];
 <SearchBar />;
 const searchQuery = "";
 const festOnlyEvents = events.filter(
   (event) =>
-    event.title.toLowerCase().includes(searchQuery) ||
-    event.location?.toLowerCase().includes(searchQuery) ||
-    event.time?.toLowerCase().includes(searchQuery)
+    (event.title.toLowerCase().includes("fest") ||
+      event.title.toLowerCase().includes("sound") ||
+      event.title.toLowerCase().includes("jazz") ||
+      event.title.toLowerCase().includes("project") ||
+      event.title.toLowerCase().includes("concert")) &&
+    (event.title.toLowerCase().includes(searchQuery) ||
+      event.location?.toLowerCase().includes(searchQuery) ||
+      event.time?.toLowerCase().includes(searchQuery))
 );
+
 
 export const singaporeEvents: EventType[] = [
   {
@@ -489,11 +526,6 @@ const EventsPage = () => {
               </div>
             </Link>
           ))}
-        </div>
-        <div className="flex justify-center mt-12">
-          <button className="px-10 py-4 bg-white text-blue-500 rounded-full font-bold hover:bg-gray-100 transition">
-            Lihat Lebih Banyak
-          </button>
         </div>
       </section>
     </div>

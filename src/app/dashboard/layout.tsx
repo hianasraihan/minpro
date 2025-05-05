@@ -3,10 +3,11 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const UserDashboardLayout = ({children}:{children:React.ReactNode}) => {
+const UserDashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   const menu = [
+    { name: "Buat Event", path: "/dashboard/create-event" }, // ← Tambahan
     { name: "Transaksi Event", path: "/dashboard/trans-event" },
     { name: "Transaksi Atraksi", path: "/dashboard/trans-attraction" },
     { name: "Atur Kata Sandi", path: "/dashboard/settings" },
@@ -17,7 +18,6 @@ const UserDashboardLayout = ({children}:{children:React.ReactNode}) => {
     <div className="mt-35 min-h-screen flex bg-gray-50">
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-6">Hai, Anas Raihan</h2>
         <nav className="space-y-4 text-sm">
           {menu.map((item) => (
             <Link
@@ -34,9 +34,10 @@ const UserDashboardLayout = ({children}:{children:React.ReactNode}) => {
         </nav>
       </aside>
 
-      {/* Form Akun */}
-      {children}
+      {/* Konten Utama */}
+      <main className="flex-1 p-6">{children}</main>
     </div>
   );
 };
+
 export default UserDashboardLayout;

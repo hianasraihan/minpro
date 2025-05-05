@@ -106,9 +106,13 @@ export default function Navbar() {
           </div>
 
           {/* Theater Dropdown */}
-          <div className="relative z-50 px-4 py-2 bg-blue-700 rounded-md ">
-            <FaCartShopping className="text-white" />
-          </div>
+          <Link
+          href= "/cart"
+          >
+            <div className="relative z-50 px-4 py-2 bg-blue-700 rounded-md ">
+              <FaCartShopping className="text-white" />
+            </div>
+          </Link>
 
           {/* Login Button */}
           <Link
